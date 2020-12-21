@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 .git
 .vscode
+=======
+node_modules
+.git
+.vscode
+package-lock.json
+npm-debug.log
+>>>>>>> frontend
