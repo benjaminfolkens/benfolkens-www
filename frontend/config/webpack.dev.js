@@ -10,17 +10,16 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 
 const sane = require('sane');
-const getPort = require('get-port');
 
 const watcher = sane(config.outDir, {
-  glob: ['**/*.js', '**/*.jsx'],
+  glob: ['**/*.js', '**/*.jsx', '**/*.css'],
 });
 
 const serve = new Serve({
   static: [config.outDir, config.pubDir],
   status: false,
   hmr: true,
-  port: getPort(),
+  port: 55000,
   host: 'localhost',
 });
 
@@ -73,7 +72,7 @@ const devConfig = {
     rules: [
       {
         test: /\.s?css$/,
-        type: 'asset',
+        // type: 'asset',
         use: [
           {
             loader: 'style-loader',
@@ -91,6 +90,7 @@ const devConfig = {
               esModule: true,
               modules: {
                 namedExport: true,
+                localIdentName: '[local]',
               },
             },
           },

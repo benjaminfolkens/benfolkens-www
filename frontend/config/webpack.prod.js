@@ -14,7 +14,11 @@ console.log(kleur.green().bold('Creating an optimized production build...'));
 const prodConfig = {
   mode: 'production',
   entry: {
-    index: ['@babel/polyfill', `${config.srcDir}/index.js`],
+    index: [
+      '@babel/polyfill',
+      `${config.srcDir}/index.js`,
+      `${config.srcDir}/index.css`,
+    ],
   },
   devtool: 'source-map',
   output: {
@@ -75,9 +79,9 @@ const prodConfig = {
         test: /\.s?css$/,
         type: 'asset',
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
+          // {
+          //   loader: MiniCssExtractPlugin.loader,
+          // },
           {
             loader: 'css-loader',
             // name: 'static/css/[name].[contenthash].[ext]',
@@ -87,6 +91,7 @@ const prodConfig = {
               modules: {
                 namedExport: true,
                 auto: true,
+                localIdentName: '[local]_[hash:base64:5]',
               },
               sourceMap: true,
             },
@@ -165,7 +170,7 @@ const prodConfig = {
     new MiniCssExtractPlugin({
       filename: 'static/css/[name].[contenthash].css',
     }),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
   ],
   performance: {
     hints: 'warning',

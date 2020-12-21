@@ -57,9 +57,9 @@ const commonConfig = {
     ],
   },
   plugins: [
-    new WebpackManifestPlugin({
-      // publicPath: config.rootDir,
-    }),
+    // new WebpackManifestPlugin({
+    //   // publicPath: config.rootDir,
+    // }),
   ],
   resolve: {
     plugins: [PnpWebpackPlugin, new ModuleScopePlugin('src', 'package.json')],
@@ -68,6 +68,8 @@ const commonConfig = {
   externals: {
     react: 'React',
     'react-dom': 'ReactDOM',
+    'react-router': 'ReactRouter',
+    'react-router-dom': 'ReactRouterDOM',
   },
   resolveLoader: {
     plugins: [PnpWebpackPlugin.moduleLoader(module)],
