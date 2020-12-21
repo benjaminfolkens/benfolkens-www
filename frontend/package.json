@@ -1,6 +1,6 @@
 {
   "name": "benfolkens.com",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "benfolkens.com: projects, posts, portfolio",
   "private": true,
   "main": "index.js",
