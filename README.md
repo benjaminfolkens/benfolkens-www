@@ -2,7 +2,6 @@
 
 - [**benfolkens.com**: _projects, posts, portfolio_](#benfolkenscom-projects-posts-portfolio)
   - [LIBRARIES USED](#libraries-used)
-    - [FRONTEND STRUCTURE](#frontend-structure)
   - [TODO LIST](#todo-list)
 
 ---
