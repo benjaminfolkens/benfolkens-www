@@ -1,7 +1,8 @@
 import 'url-polyfill';
 
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
+import reportWebVitals from './reportWebVitals';
 
 import './index.css';
 
@@ -13,7 +14,8 @@ if (process.env.NODE_ENV !== 'production' && typeof window !== 'undefined') {
   window.$RefreshReg$ = () => {};
   window.$RefreshSig$ = () => (type) => type;
 }
-
 const root = document.getElementById('root');
 
-render(<App />, root);
+ReactDOM.render(<App />, root);
+
+reportWebVitals(console.log);
