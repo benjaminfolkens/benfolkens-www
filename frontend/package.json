@@ -7,6 +7,10 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production wp --config ./webpack.config",
+<<<<<<< HEAD
+=======
+    "predev": "npm run build",
+>>>>>>> frontend
     "dev": "cross-env NODE_ENV=development wp --watch --progress --config ./webpack.config",
     "test": "jest"
   },
@@ -15,7 +19,11 @@
   "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
     "@babel/runtime": "^7.12.5",
+<<<<<<< HEAD
     "@blueprintjs/core": "^3.36.0",
+=======
+    "@loadable/component": "^5.14.1",
+>>>>>>> frontend
     "axios": "^0.21.0",
     "core-js": "^3.8.1",
     "kleur": "^3.0.3",
@@ -64,7 +72,10 @@
     "eslint-plugin-testing-library": "^3.10.1",
     "eslint-webpack-plugin": "^2.4.1",
     "file-loader": "^6.2.0",
+<<<<<<< HEAD
     "get-port": "^5.1.1",
+=======
+>>>>>>> frontend
     "html-webpack-plugin": "^5.0.0-beta.1",
     "jest": "^26.6.3",
     "mini-css-extract-plugin": "^1.3.3",
@@ -84,6 +95,10 @@
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.0.3",
+<<<<<<< HEAD
+=======
+    "web-vitals": "^1.0.1",
+>>>>>>> frontend
     "webpack": "^5.11.0",
     "webpack-bundle-analyzer": "^4.3.0",
     "webpack-manifest-plugin": "^3.0.0",
